@@ -3,5 +3,7 @@ var build = require('./build');
 var path = __dirname + '/../build';
 var dist = process.cwd() + '/';
 
-mkdir.init();
-build.init(path, dist);
+exports.init = function(){
+	mkdir.init();
+	build.init(path, dist);
+}
