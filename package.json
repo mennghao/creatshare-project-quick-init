@@ -1,0 +1,25 @@
+{
+  "name": "creatshare-project-quick-init",
+  "version": "1.0.0",
+  "description": "实验室项目初始化工具",
+  "main": "index.js",
+  "bin": {
+    "creatshare-project-quick-init": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mennghao/creatshare-project-quick-init.git"
+  },
+  "author": "mennghao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mennghao/creatshare-project-quick-init/issues"
+  },
+  "homepage": "https://github.com/mennghao/creatshare-project-quick-init#readme",
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
+}
