@@ -30,14 +30,16 @@ exports.init = function(){
 	console.log('开始创建项目目录')
 	createDir('src', 'src   //开发目录\n|', function(){
 		createDir('src/less', '|--less    //less文件资源目录\n|', function(){
-			createDir('src/js', '|--js      //js  文件资源目录\n|', function(){
-				createDir('src/images','|--images  //图片资源目录\n|', function(){
-					createDir('src/dist', '|--dist    //测试发布目录\n|', function(){
-						createDir('dist', 'dist  //正式环境发布目录\n|', function(){
-							createDir('test', 'test  //测试目录\n|', function(){
-								createDir('test/e2e', '|--e2e     //e2e测试目录\n|', function(){
-									createDir('test/unit', '|--unit    //单元测试目录', function(){
-										console.log('项目目录创建完毕');
+			createDir('src/js', '|--js      //js  文件资源目录\n|   |', function(){
+				createDir('src/js/lib', '|   |--lib    //所需的库或框架文件存放目录\n|', function(){
+					createDir('src/images','|--images  //图片资源目录\n|', function(){
+						createDir('src/dist', '|--dist    //测试发布目录\n|', function(){
+							createDir('dist', 'dist  //正式环境发布目录\n|', function(){
+								createDir('test', 'test  //测试目录\n|', function(){
+									createDir('test/e2e', '|--e2e     //e2e测试目录\n|', function(){
+										createDir('test/unit', '|--unit    //单元测试目录', function(){
+											console.log('项目目录创建完毕');
+										})
 									})
 								})
 							})
