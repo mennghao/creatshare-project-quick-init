@@ -4,7 +4,7 @@ var create = require('../src/create');
 
 program
 	.allowUnknownOption()
-	.version('1.0.1')
+	.version('1.0.2')
 	.option('init', 'Create Start')
 	.parse(process.argv)
 

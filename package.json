@@ -1,6 +1,6 @@
 {
   "name": "creatshare-project-quick-init",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "实验室项目初始化工具",
   "main": "index.js",
   "bin": {
