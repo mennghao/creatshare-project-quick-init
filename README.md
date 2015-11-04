@@ -53,9 +53,11 @@ README.md
 执行```cs init```之后，基础项目目录已经生成
 
 ```npm install``` 安装项目所需依赖
+
 ```npm start```   创建一个本地server, 并自动打开浏览器，实时预览
 
 ## 线上部署
 ```npm install``` 安装项目依赖
+
 ```gulp dist``` 部署所有资源至dist目录，dist目录为生产目录
 
