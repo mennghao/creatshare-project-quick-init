@@ -6,7 +6,7 @@ let program = require('commander'),
 
 program
 	.allowUnknownOption()
-	.version('1.1.2')
+	.version('1.2.0')
 	.option('init', 'Create Start')
 	.parse(process.argv)
 
