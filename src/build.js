@@ -1,4 +1,6 @@
-var fs = require('fs');
+'use strict';
+
+let fs = require('fs');
 
 /**
  * [初始化静态资源]
@@ -11,7 +13,7 @@ exports.init = function(path, dist){
 		if (err) { throw err; }
 		//遍历目录中的文件
 		files.forEach(function(file){
-			var src = path + '/' + file,
+			let src = path + '/' + file,
 				build = dist + '/' + file,
 				readable, writable;
 			

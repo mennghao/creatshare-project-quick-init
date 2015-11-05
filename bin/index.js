@@ -1,6 +1,8 @@
 #!/usr/bin/env node
-var program = require('commander');
-var create = require('../src/create');
+'use strict';
+
+let program = require('commander'),
+	create = require('../src/create');
 
 program
 	.allowUnknownOption()
