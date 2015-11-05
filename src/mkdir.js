@@ -1,52 +1,41 @@
-var fs = require('fs');
+'use strict';
 
-/*
- * 创建项目目录
- * @param [name] { String } 目录路径或名称
- * @param [name] { Function } 创建之后执行的回调
+let fs = require('fs');
+
+/**
+ * [创建项目目录]
+ * @param  {[type]} name [description]
+ * @param  {[type]} msg  [description]
+ * @return {[type]}      [description]
  */
-var createDir = function(name, msg, fn){
-	fs.exists(name, function( exists ){
-        //目录已存在
-        if(exists){
-            if (fn) fn();
-        } else {
-    		fs.mkdir(name, 0777, function(err){
-				if (err) {
-					console.log(err);
-				} else {
-					console.log(msg);
-
-					if (fn) fn();
-				}
-			})
-
-	    }
-    });
+let createDir = (name, msg) => {
+	fs.exists(name, (exists) => {
+		//目录已存在
+		if (!exists) {
+			fs.mkdirSync(name, '0755');
+			console.log(msg);
+		}
+	})
 }
 
-//创建项目目录
+let promise = new Promise((resolve, reject) => {
+	resolve();
+});
+
+/**
+ * [创建项目目录]
+ * @return {[type]} [description]
+ */
 exports.init = function(){
-	console.log('开始创建项目目录')
-	createDir('src', 'src   //开发目录\n|', function(){
-		createDir('src/less', '|--less    //less文件资源目录\n|', function(){
-			createDir('src/js', '|--js      //js  文件资源目录\n|   |', function(){
-				createDir('src/js/lib', '|   |--lib    //所需的库或框架文件存放目录\n|', function(){
-					createDir('src/images','|--images  //图片资源目录\n|', function(){
-						createDir('src/dist', '|--dist    //测试发布目录\n|', function(){
-							createDir('dist', 'dist  //正式环境发布目录\n|', function(){
-								createDir('test', 'test  //测试目录\n|', function(){
-									createDir('test/e2e', '|--e2e     //e2e测试目录\n|', function(){
-										createDir('test/unit', '|--unit    //单元测试目录', function(){
-											console.log('项目目录创建完毕');
-										})
-									})
-								})
-							})
-						})
-					})
-				})
-			})
-		})
-	})
+	console.log('开始创建项目目录');
+	promise.then(createDir('src', 'src   //开发目录\n|'))
+		   .then(createDir('src/less', '|--less    //less文件资源目录\n|'))
+		   .then(createDir('src/js', '|--js      //js  文件资源目录\n|   |'))
+		   .then(createDir('src/js/lib', '|   |--lib    //所需的库或框架文件存放目录\n|'))
+		   .then(createDir('src/images','|--images  //图片资源目录\n|'))
+		   .then(createDir('src/dist', '|--dist    //测试发布目录\n|'))
+		   .then(createDir('dist', 'dist  //正式环境发布目录\n|'))
+		   .then(createDir('test', 'test  //测试目录\n|'))
+		   .then(createDir('test/e2e', '|--e2e     //e2e测试目录\n|'))
+		   .then(createDir('test/unit', '|--unit    //单元测试目录\n项目目录创建完毕'))
 }
