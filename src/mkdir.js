@@ -26,7 +26,7 @@ let promise = new Promise((resolve, reject) => {
  * [创建项目目录]
  * @return {[type]} [description]
  */
-exports.init = function(){
+exports.init = () => {
 	console.log('开始创建项目目录');
 	promise.then(createDir('src', 'src   //开发目录\n|'))
 		   .then(createDir('src/less', '|--less    //less文件资源目录\n|'))

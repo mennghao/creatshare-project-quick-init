@@ -8,16 +8,16 @@ let fs = require('fs');
  * @param  {[type]} dist [description]
  * @return {[type]}      [description]
  */
-exports.init = function(path, dist){
-	fs.readdir(path, function(err, files){
+exports.init = (path, dist) => {
+	fs.readdir(path, (err, files) => {
 		if (err) { throw err; }
 		//遍历目录中的文件
-		files.forEach(function(file){
+		files.forEach((file) => {
 			let src = path + '/' + file,
 				build = dist + '/' + file,
 				readable, writable;
 			
-			fs.stat(src, function(err, st){
+			fs.stat(src, (err, st) => {
 				if (err) { throw err; }
 
 				if (st.isFile()){
