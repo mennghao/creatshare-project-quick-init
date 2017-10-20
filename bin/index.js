@@ -1,5 +1,5 @@
 let program = require('commander'),
-	cs = require('../src/create')
+	cs = require('../src/cs')
 
 program
 	.allowUnknownOption()

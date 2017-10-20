@@ -17,7 +17,6 @@
     "webpack",
     "esint"
   ],
-  "author": "mennghao",
   "author": {
     "name": "icorvoh",
     "email": "icorvoh@gmail.com",
@@ -29,6 +28,6 @@
   },
   "homepage": "https://github.com/creatshare-demos/creatshare-project-quick-init",
   "dependencies": {
-    "commander": "^2.9.0"
+    "commander": "^2.11.0"
   }
 }

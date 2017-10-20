@@ -1,16 +1,13 @@
 'use strict';
 
 let mkdir = require('./mkdir'),
-	build = require('./build'),
+    create = require('./create'),
 	path = __dirname + '/../build',
 	dist = process.cwd() + '/';
 
 exports.create = () => {
 	mkdir.init();
-	build.init(path, dist);
-}
-
-exports.share = () => {
-	mkdir.init();
-	build.init(path, dist);
+	// path: build 目录
+	// dist: 当前目录
+	create.init(path, dist);
 }

@@ -79,8 +79,7 @@ cs --enjoy
 * 该项目结构如下
 
 ```
-build # 
-dist # cs create 命令生成的模板
+build # cs create 命令生成的模板
 ```
 
 * cs 命令生成的项目结构如下

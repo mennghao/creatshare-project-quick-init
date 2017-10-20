@@ -7,14 +7,17 @@ let fs = require('fs');
  * @return {[type]}      [description]
  */
 exports.init = (path, dist) => {
+	// path: build 目录
+	// dist: 当前目录
 	fs.readdir(path, (err, files) => {
 		if (err) { throw err; }
 		//遍历目录中的文件
 		files.forEach((file) => {
+			console.log(file)
 			let src = path + '/' + file,
 				build = dist + '/' + file,
 				readable, writable;
-			
+			// 判断正在处理的 build 文件夹下每个到底是文件，还是目录
 			fs.stat(src, (err, st) => {
 				if (err) { throw err; }
 
