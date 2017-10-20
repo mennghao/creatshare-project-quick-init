@@ -11,17 +11,7 @@ program
    .command('create <dir>')
    .description('create a new web app project')
    .action(function(dir) {
-     console.log('create "%s"', dir)
+	   cs.create()
    })
 
 program.parse(process.argv)
-
-if (program.rawArgs[2] == 'create') {
-	console.log('start create')
-	cs.create()
-} else if (program.rawArgs[2] == 'share') {
-	console.log('start share')
-	cs.share()
-} else {
-	console.log('warning: missing required command `create` or `share`')
-}

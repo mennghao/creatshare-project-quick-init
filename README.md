@@ -9,25 +9,9 @@ CreatShare 互联网实验室前端项目初始化工具
 CreatShare 前端组正在对此项目进行更新，当前进度如下：
 
 - [ ] cs 命令参数用来生成新的项目目录而非在当前目录下生成相关文件
-- [ ] cs 命令构建出 package.json 其中包含 webpack
-
-```
-{
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "192x192",
-      "type": "image/png"
-    }
-  ],
-  "start_url": "./index.html",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
-}
-```
+- [ ] cs 命令构建出 package.json 其中包含 webpack, webpack-dev-server
+- [ ] public 目录生成时不会生成其下的文件
+- [ ] 目录由于是异步生成，偶尔会出现异步相关的 bug
 
 ## 安装
 
@@ -85,12 +69,12 @@ CreatShare 前端组正在对此项目进行更新，当前进度如下：
 ├── .gitignore           # Git 忽略特殊文件
 ├── README.md            # 项目介绍
 ├── dist                 # 正式环境发布目录
+├── index.js             # 项目入口文件
 ├── package.json         # 项目配置文件
 ├── public               # 公用资源目录
 │   ├── favicon.ico      # 网页图标
 │   ├── index.html       # 项目主页
 │   └── manifest.json    # 网络应用清单
-├── spec                 # 测试代码
 └── src                  # 开发目录
     ├── images           # 图片资源目录
     └── style            # 样式文件资源目录

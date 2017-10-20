@@ -27,9 +27,8 @@ let promise = new Promise((resolve, reject) => {
 (doCreate = () => {
 	console.log
 	promise
-		   .then(createDir('dist',       '├── dist        # 正式环境发布目录'))
+		   .then(createDir('dist',       '\n.\n├── dist        # 正式环境发布目录'))
 		   .then(createDir('public',     '├── public      # 公用资源目录'))
-		   .then(createDir('spec',       '├── spec        # 测试目录'))
 		   .then(createDir('src',        '└── src         # 开发目录'))
 		   .then(createDir('src/images', '    ├── images  # 图片资源目录'))
 		   .then(createDir('src/style',  '    └── style   # 样式文件资源目录\n\n项目目录创建完毕'))
