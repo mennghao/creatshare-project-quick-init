@@ -1,13 +1,13 @@
 'use strict';
 
-let mkdir = require('./mkdir'),
-    create = require('./create'),
+let create = require('./create'),
 	path = __dirname + '/../build',
 	dist = process.cwd() + '/';
 
+/**
+ * [运行 create 命令]
+ * @return {[type]} [description]
+ */
 exports.create = () => {
-	mkdir.init();
-	// path: build 目录
-	// dist: 当前目录
-	create.init(path, dist);
+	create.run(path, dist);
 }

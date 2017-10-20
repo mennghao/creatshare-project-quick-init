@@ -2,18 +2,14 @@
 
 [![](https://img.shields.io/npm/v/@cycle/core.svg)](https://www.npmjs.com/package/creatshare-project-quick-init) [![](https://img.shields.io/npm/l/express.svg)](https://github.com/creatshare-demos/creatshare-project-quick-init/blob/master/LICENSE)
 
-实验室项目初始化工具
+CreatShare 互联网实验室前端项目初始化工具
 
 ## 新版本正在更新
 
 CreatShare 前端组正在对此项目进行更新，当前进度如下：
 
-- [ ] cs 命令构建出实验室 eslint 规范
-- [ ] cs 命令构建出实验室 .gitignore 模板
 - [ ] cs 命令参数用来生成新的项目目录而非在当前目录下生成相关文件
-- [ ] cs 命令构建出的构建工具需要从 gulp 过渡到 webpack
 - [ ] cs 命令构建出 package.json 其中包含 webpack
-- [ ] cs 命令构建出 public/manifest.json
 
 ```
 {
@@ -33,18 +29,6 @@ CreatShare 前端组正在对此项目进行更新，当前进度如下：
 }
 ```
 
-- [ ] cs 命令成果执行后打印出的目录结构排版仿照 tree 命令生成的结构
-- [ ] 该项目使用实验室 eslint 规范来对代码进行规范
-- [ ] 该项目需要编写测试并引入持续集成
-
-```
-cs create myapp
-cs share # git add . && git commit -m ":rocket: cs share" && git push origin master
-cs --version
-cs --help
-cs --enjoy
-```
-
 ## 安装
 
 ```
@@ -57,76 +41,60 @@ cs --enjoy
 ➜  yarn global add creatshare-project-quick-init
 ```
 
-```
-➜  cs create <project-name>
-```
-
-上面的命令可以快速创建一个项目及其结构
+## 运行
 
 ```
-➜  cs share
-```
-上面的命令一并进行 git add、commit 和 push
-
-```
-➜  cs --version
+➜  cs create <project-name> # 使用 cs 脚手架快速创建一个最小化 Web App 项目
 ```
 
-查看版本号
+说明如下
 
-## 说明
-
-* 该项目结构如下
-
-```
-build # cs create 命令生成的模板
-```
-
-* cs 命令生成的项目结构如下
+* 执行 ```cs creatshare <APPNAME>``` 脚手架命令之后，Web App 项目结构已经生成。
+* 进入 ```<APPNAME>``` 目录进行 ```npm install``` 或 ```yarn``` 来安装项目所需依赖。
+* 依赖安装之后，输入 ```npm start``` 或 ```yarn start``` 创建一个本地 server, 并自动打开浏览器，实时预览。
 
 ```
-dist  //发布目录，用于生产环境
-|
-src   //开发目录，开发时所需资源
-|
-|----dist  //测试环境目录
-|     |
-|     |----static
-|     		|----css  //编译打包后的css资源
-|     		|
-|     		|----js   //打包压缩后的js资源
-|     		|
-|     		|----imgs //测试环境图片资源
-|
-|----less  //开发所需less代码
-|
-|----js    //开发所需js代码
-|    |
-|    |----lib //库或框架资源
-|
-|----imgs  //开发所需图片资源
-|
-index.html    //开发页面
-|
-gulpfile.js
-|
-package.json
-|
-README.md
+➜  cs -V # --version  # 查看 cs 版本号
+➜  cs -e # --enjoy    # 尽情的享受 cs 脚手架吧
+➜  cs -h # --help     # 打印 cs 帮助手册
 ```
 
-## 开发环境
+## 备注
 
-执行```cs init```之后，基础项目目录已经生成
+该项目结构如下
 
-```npm install``` 或 ```yarn```安装项目所需依赖
+```
+.
+├── LICENSE         # 开源协议
+├── README.md       # 项目介绍
+├── bin             # cs 命令主目录
+│   └── index.js    # cs 命令引导文件
+├── build           # cs create 命令参考的模板
+├── package.json    # 项目配置
+├── src             # cs 命令依赖的源代码
+│   ├── create.js   # cs create 命令源码
+│   └── cs.js       # cs 命令源码入口文件
+└── yarn.lock       # yarn 包管理器依赖说明
+```
 
-```npm start``` 或 ```yarn start``` 创建一个本地server, 并自动打开浏览器，实时预览
+```cs``` 命令复制 build 文件夹的内容，生成的项目结构如下
 
-## 线上部署
-```npm install``` 或 ```yarn``` 安装项目依赖
-
-```gulp dist``` 部署所有资源至dist目录，dist目录为生产目录
+```
+.
+├── .eslint.js           # JavaScript 代码规范
+├── .gitignore           # Git 忽略特殊文件
+├── README.md            # 项目介绍
+├── dist                 # 正式环境发布目录
+├── package.json         # 项目配置文件
+├── public               # 公用资源目录
+│   ├── favicon.ico      # 网页图标
+│   ├── index.html       # 项目主页
+│   └── manifest.json    # 网络应用清单
+├── spec                 # 测试代码
+└── src                  # 开发目录
+    ├── images           # 图片资源目录
+    └── style            # 样式文件资源目录
+```
 
 # 开源协议
 

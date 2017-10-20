@@ -5,7 +5,6 @@ program
 	.allowUnknownOption()
 	.version('2.0.0')
 	.description('The scaffold of CreatShare`s front-end project')
-	.option('init', 'Create Start')
 	.option('-e, --enjoy')
 
 program
@@ -13,13 +12,6 @@ program
    .description('create a new web app project')
    .action(function(dir) {
      console.log('create "%s"', dir)
-   })
-
-program
-   .command('share')
-   .description('add、commit and push all changes into origin/master.')
-   .action(function() {
-     console.log('deploying')
    })
 
 program.parse(process.argv)
