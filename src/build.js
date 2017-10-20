@@ -1,5 +1,3 @@
-'use strict';
-
 let fs = require('fs');
 
 /**
@@ -28,4 +26,4 @@ exports.init = (path, dist) => {
 			})
 		})
 	})
-}	
+}

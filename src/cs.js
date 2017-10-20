@@ -5,7 +5,12 @@ let mkdir = require('./mkdir'),
 	path = __dirname + '/../build',
 	dist = process.cwd() + '/';
 
-exports.init = () => {
+exports.create = () => {
+	mkdir.init();
+	build.init(path, dist);
+}
+
+exports.share = () => {
 	mkdir.init();
 	build.init(path, dist);
 }

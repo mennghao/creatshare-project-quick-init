@@ -1,16 +1,35 @@
-#!/usr/bin/env node
-'use strict';
-
 let program = require('commander'),
-	create = require('../src/create');
+	cs = require('../src/create')
 
 program
 	.allowUnknownOption()
-	.version('1.2.0')
+	.version('2.0.0')
+	.description('The scaffold of CreatShare`s front-end project')
 	.option('init', 'Create Start')
-	.parse(process.argv)
+	.option('-e, --enjoy')
 
-//接收init参数,开始创建项目
-if (program.init){
-	create.init();
+program
+   .command('create <dir>')
+   .description('create a new web app project')
+   .action(function(dir) {
+     console.log('create "%s"', dir)
+   })
+
+program
+   .command('share')
+   .description('add、commit and push all changes into origin/master.')
+   .action(function() {
+     console.log('deploying')
+   })
+
+program.parse(process.argv)
+
+if (program.rawArgs[2] == 'create') {
+	console.log('start create')
+	cs.create()
+} else if (program.rawArgs[2] == 'share') {
+	console.log('start share')
+	cs.share()
+} else {
+	console.log('warning: missing required command `create` or `share`')
 }

@@ -129,3 +129,6 @@ README.md
 
 ```gulp dist``` 部署所有资源至dist目录，dist目录为生产目录
 
+# 开源协议
+
+[MIT LICENSE](./LICENSE)
