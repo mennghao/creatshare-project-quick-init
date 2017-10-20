@@ -12,21 +12,61 @@ CreatShare 前端组正在对此项目进行更新，当前进度如下：
 - [ ] cs 命令构建出实验室 .gitignore 模板
 - [ ] cs 命令参数用来生成新的项目目录而非在当前目录下生成相关文件
 - [ ] cs 命令构建出的构建工具需要从 gulp 过渡到 webpack
+- [ ] cs 命令构建出 package.json 其中包含 webpack
+- [ ] cs 命令构建出 public/manifest.json
+
+```
+{
+  "short_name": "React App",
+  "name": "Create React App Sample",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
+```
+
 - [ ] cs 命令成果执行后打印出的目录结构排版仿照 tree 命令生成的结构
 - [ ] 该项目使用实验室 eslint 规范来对代码进行规范
 - [ ] 该项目需要编写测试并引入持续集成
 
+```
+cs create myapp
+cs share # git add . && git commit -m ":rocket: cs share" && git push origin master
+cs --version
+cs --help
+cs --enjoy
+```
+
 ## 安装
 
 ```
-➜  sudo npm install -g creatshare-project-quick-init
+➜  npm install -g creatshare-project-quick-init
+```
+
+或
+
+```
+➜  yarn global add creatshare-project-quick-init
 ```
 
 ```
-➜  cs <project-name>
+➜  cs create <project-name>
 ```
 
-上面的命令可以在当前目录快速创建一个项目的结构
+上面的命令可以快速创建一个项目及其结构
+
+```
+➜  cs share
+```
+上面的命令一并进行 git add、commit 和 push
 
 ```
 ➜  cs --version
@@ -36,7 +76,14 @@ CreatShare 前端组正在对此项目进行更新，当前进度如下：
 
 ## 说明
 
-项目结构如下
+* 该项目结构如下
+
+```
+build # 
+dist # cs create 命令生成的模板
+```
+
+* cs 命令生成的项目结构如下
 
 ```
 dist  //发布目录，用于生产环境
