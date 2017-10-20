@@ -8,10 +8,9 @@ CreatShare 互联网实验室前端项目初始化工具
 
 CreatShare 前端组正在对此项目进行更新，当前进度如下：
 
-- [ ] cs 命令参数用来生成新的项目目录而非在当前目录下生成相关文件
-- [ ] cs 命令构建出 package.json 其中包含 webpack, webpack-dev-server
 - [ ] public 目录生成时不会生成其下的文件
-- [ ] 目录由于是异步生成，偶尔会出现异步相关的 bug
+- [ ] cs 命令构建出的项目要能运行最小化 Web App 应用
+- [ ] cs 命令参数用来生成新的项目目录而非在当前目录下生成相关文件
 
 ## 安装
 
@@ -43,7 +42,7 @@ CreatShare 前端组正在对此项目进行更新，当前进度如下：
 ➜  cs -h # --help     # 打印 cs 帮助手册
 ```
 
-## 备注
+## 结构
 
 该项目结构如下
 
@@ -68,6 +67,7 @@ CreatShare 前端组正在对此项目进行更新，当前进度如下：
 ├── .eslint.js           # JavaScript 代码规范
 ├── .gitignore           # Git 忽略特殊文件
 ├── README.md            # 项目介绍
+├── build                # 项目源码打包目录
 ├── dist                 # 正式环境发布目录
 ├── index.js             # 项目入口文件
 ├── package.json         # 项目配置文件
@@ -80,6 +80,14 @@ CreatShare 前端组正在对此项目进行更新，当前进度如下：
     └── style            # 样式文件资源目录
 ```
 
+## 备注(暂存问题)
+
+- [ ] 目录由于是异步生成，偶尔会出现与异步相关的 bug
+
 # 开源协议
 
 [MIT LICENSE](./LICENSE)
+
+# CreatShare 互联网实验室
+
+![CreatShare-logo-powerby.png](./CreatShare-logo-powerby.png)
