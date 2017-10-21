@@ -9,5 +9,5 @@ let create = require('./create'),
  * @return {[type]} [description]
  */
 exports.create = () => {
-	create.run(path, dist);
+	create.init(path, dist);
 }

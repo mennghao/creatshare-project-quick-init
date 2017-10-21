@@ -2,13 +2,13 @@
 
 [![](https://img.shields.io/npm/v/@cycle/core.svg)](https://www.npmjs.com/package/creatshare-project-quick-init) [![](https://img.shields.io/npm/l/express.svg)](https://github.com/creatshare-demos/creatshare-project-quick-init/blob/master/LICENSE)
 
-CreatShare 互联网实验室前端项目初始化工具
+CreatShare 互联网实验室前端 Web App 项目初始化工具
 
 ## 新版本正在更新
 
 CreatShare 前端组正在对此项目进行更新，当前进度如下：
 
-- [ ] public 目录生成时不会生成其下的文件
+- [ ] public、src 目录生成时不会生成其下的文件
 - [ ] cs 命令构建出的项目要能运行最小化 Web App 应用
 - [ ] cs 命令参数用来生成新的项目目录而非在当前目录下生成相关文件
 
@@ -67,8 +67,7 @@ CreatShare 前端组正在对此项目进行更新，当前进度如下：
 ├── .eslint.js           # JavaScript 代码规范
 ├── .gitignore           # Git 忽略特殊文件
 ├── README.md            # 项目介绍
-├── build                # 项目源码打包目录
-├── dist                 # 正式环境发布目录
+├── build                # 项目发布目录
 ├── index.js             # 项目入口文件
 ├── package.json         # 项目配置文件
 ├── public               # 公用资源目录
@@ -77,7 +76,8 @@ CreatShare 前端组正在对此项目进行更新，当前进度如下：
 │   └── manifest.json    # 网络应用清单
 └── src                  # 开发目录
     ├── images           # 图片资源目录
-    └── style            # 样式文件资源目录
+    ├── style            # 样式文件资源目录
+    └── app.js           # 源码入口文件
 ```
 
 ## 备注(暂存问题)
