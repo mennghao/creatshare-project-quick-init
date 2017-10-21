@@ -2,6 +2,21 @@ let fs = require('fs')
 // 不生成的文件
 const miscFiles = ['.DS_Store']
 
+createRootDir = (rootDir) => {
+  fs.access(process.cwd(), function(err){
+    if (err) {
+      // 目录不存在时创建目录
+      fs.mkdirSync(rootDir);
+    }
+  })
+}
+
+/**
+ * [初始化静态资源]
+ * @param  {[type]} src  [初始化资源路径]
+ * @param  {[type]} dist [当前终端所在目录]
+ * @return {[type]}      [description]
+ */
 copyDir = (src, dist) => {
   fs.access(dist, function(err){
     if (err) {
@@ -41,4 +56,9 @@ copyDir = (src, dist) => {
   }
 }
 
-exports.init = copyDir
+exports.init = (path, dist, rootDir) => {
+  createRootDir(rootDir)
+  // 从新目录开始新建项目
+  dist = dist + rootDir
+  copyDir(path, dist)
+}
