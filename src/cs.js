@@ -1,5 +1,5 @@
 let create = require('./create'),
-	path = __dirname + '/../build',
+	path = __dirname + '/../dist',
 	dist = process.cwd() + '/'
 
 const helpGuide = () => {
@@ -7,7 +7,6 @@ const helpGuide = () => {
 	console.log('├── CreatShare-logo-powerby.png    # 实验室 Logo')
 	console.log('├── LICENSE                        # 开源协议')
 	console.log('├── README.md                      # 项目介绍')
-	console.log('├── build                          # 项目发布包目录')
 	console.log('├── index.js                       # 项目入口')
 	console.log('├── package.json                   # 项目配置')
 	console.log('├── public                         # 公用资源目录')

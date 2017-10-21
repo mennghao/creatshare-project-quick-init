@@ -2,14 +2,16 @@
   "name": "cs-web-app",
   "version": "0.0.1",
   "private": true,
-  "homepage": "http://localhost:3000/",
+  "homepage": "http://localhost:8080/",
   "description": "CS Web App",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --content-base build --inline --hot"
+    "start": "webpack-dev-server --progress --colors",
+    "build": "webpack webpack.config.js"
   },
   "dependencies": {
-    "clean-webpack-plugin": "^0.1.16"
+    "clean-webpack-plugin": "^0.1.16",
+    "html-webpack-plugin": "^2.30.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -20,7 +22,7 @@
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
     "webpack": "^3.5.5",
-    "webpack-dev-server": "^3.8.1"
+    "webpack-dev-server": "^2.9.3"
   },
   "keywords": [],
   "author": {

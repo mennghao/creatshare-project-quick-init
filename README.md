@@ -4,14 +4,6 @@
 
 CreatShare 互联网实验室前端 Web App 项目初始化工具
 
-## 新版本正在更新
-
-CreatShare 前端组正在对此项目进行更新，当前进度如下：
-
-- [ ] cs 命令参数用来生成新的项目目录而非在当前目录下生成相关文件
-- [ ] cs 命令构建出的项目要能运行最小化 Web App 应用
-
-
 ## 安装
 
 ```
@@ -52,7 +44,7 @@ CreatShare 前端组正在对此项目进行更新，当前进度如下：
 ├── README.md       # 项目介绍
 ├── bin             # cs 命令主目录
 │   └── index.js    # cs 命令引导文件
-├── build           # cs create 命令参考的模板
+├── dist           # cs create 命令参考的模板
 ├── package.json    # 项目配置
 ├── src             # cs 命令依赖的源代码
 │   ├── create.js   # cs create 命令源码
@@ -60,14 +52,13 @@ CreatShare 前端组正在对此项目进行更新，当前进度如下：
 └── yarn.lock       # yarn 包管理器依赖说明
 ```
 
-```cs``` 命令复制 build 文件夹的内容，生成的项目结构如下
+```cs``` 命令复制 dist 文件夹的内容，生成的项目结构如下
 
 ```
 .
 ├── .eslint.js           # JavaScript 代码规范
 ├── .gitignore           # Git 忽略特殊文件
 ├── README.md            # 项目介绍
-├── build                # 项目发布目录
 ├── index.js             # 项目入口文件
 ├── package.json         # 项目配置文件
 ├── public               # 公用资源目录
@@ -79,10 +70,6 @@ CreatShare 前端组正在对此项目进行更新，当前进度如下：
     ├── style            # 样式文件资源目录
     └── app.js           # 源码入口文件
 ```
-
-## 备注(暂存问题)
-
-- [ ] 目录由于是异步生成，偶尔会出现与异步相关的 bug
 
 # 开源协议
 
