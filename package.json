@@ -1,7 +1,7 @@
 {
   "name": "creatshare-project-quick-init",
   "version": "1.2.0",
-  "description": "实验室项目初始化工具",
+  "description": "CreatShare 实验室前端项目初始化工具",
   "main": "index.js",
   "bin": {
     "cs": "bin/index.js"
@@ -11,15 +11,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mennghao/creatshare-project-quick-init.git"
+    "url": "https://github.com/creatshare-demos/creatshare-project-quick-init"
   },
-  "author": "mennghao",
+  "keywords": [
+    "webpack",
+    "esint"
+  ],
+  "author": {
+    "name": "icorvoh",
+    "email": "icorvoh@gmail.com",
+    "url": "https://github.com/icorvoh"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mennghao/creatshare-project-quick-init/issues"
   },
-  "homepage": "https://github.com/mennghao/creatshare-project-quick-init#readme",
+  "homepage": "https://github.com/creatshare-demos/creatshare-project-quick-init",
   "dependencies": {
-    "commander": "^2.9.0"
+    "commander": "^2.11.0"
   }
 }
